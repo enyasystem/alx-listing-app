@@ -19,136 +19,87 @@ By completing this milestone, you will:
 - Use TypeScript for type safety and clean code.  
 - Configure TailwindCSS for responsive and modern UI design.  
 - Organize folders and components for scalability.  
-- Create basic reusable components such as Card and Button.
+# ALX Listing App
 
----
+A small scaffold for an Airbnb-like listing page built with Next.js (Pages Router), TypeScript and Tailwind CSS. This repository contains the minimal project structure, example components, and configuration you can build on.
 
-## Requirements
+## Quick start
 
-### Prerequisites
+1. Clone the repo and install dependencies:
 
-- Basic knowledge of Next.js, React, and TypeScript.  
-- Familiarity with TailwindCSS.  
-- Understanding of ESLint and project structuring.
+```bash
+cd alx-listing-app
+npm install
+```
 
-### Technical Requirements
+2. Run the development server:
 
-- **Next.js version:** 13+  
-- **Node.js version:** 16+  
-- A text editor like VS Code with Tailwind and TypeScript extensions.
+```bash
+npm run dev
+```
 
----
+Open http://localhost:3000 in your browser.
 
-## Project Setup
-Tailwind Configuration
+## What’s included
 
-tailwind.config.js
+- Next.js (Pages Router) + TypeScript
+- Tailwind CSS (configured via `tailwind.config.js`)
+- PostCSS configuration
+- ESLint (basic setup)
+- Example components and interfaces
 
-module.exports = {
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+## Project structure
 
+```
+alx-listing-app/
+├── components/
+│   └── common/
+│       ├── Card.tsx        # Reusable card component
+│       └── Button.tsx      # Reusable button component
+├── constants/
+│   └── index.ts            # App-wide constants
+├── interfaces/
+│   └── index.ts            # TypeScript interfaces
+├── pages/
+│   ├── _app.tsx            # App wrapper (imports global CSS)
+│   └── index.tsx           # Example landing page
+├── public/
+│   └── assets/             # Images and SVGs (placeholder included)
+├── styles/
+│   └── globals.css         # Tailwind directives only
+├── tailwind.config.js
+├── postcss.config.js
+├── tsconfig.json
+└── package.json
+```
 
-styles/globals.css
+## Tailwind configuration (important files)
 
+- `tailwind.config.js` — content paths already include `./pages/**/*.{ts,tsx}` and `./components/**/*.{js,ts,jsx,tsx}`.
+- `styles/globals.css` — contains only Tailwind directives:
+
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-Folder Structure
-alx-listing-app/
-│
-├── components/
-│   └── common/
-│       ├── Card.tsx
-│       └── Button.tsx
-│
-├── interfaces/
-│   └── index.ts
-│
-├── constants/
-│   └── index.ts
-│
-├── public/
-│   └── assets/
-│       └── (images, icons, SVGs)
-│
-├── pages/
-│   └── index.tsx
-│
-├── styles/
-│   └── globals.css
-│
-└── README.md
-
-Run the following command to create the app:
-
-```bash
-npx create-next-app@latest alx-listing-app --typescript --tailwind --eslint --no-app-router --no-src-dir
 ```
-## Components and Interfaces
 
-Card.tsx – reusable component for property display.
+## Components
 
-Button.tsx – reusable component for actions like “Book Now” or “View Details”.
+- `components/common/Card.tsx` — simple reusable card for listings.
+- `components/common/Button.tsx` — basic button component with Tailwind styles.
 
-interfaces/index.ts – defines TypeScript interfaces such as CardProps and ButtonProps.
+## Interfaces
 
-constants/index.ts – stores reusable data and configuration values.
+- `interfaces/index.ts` — contains `CardProps` and `ButtonProps` TypeScript interfaces used by the components.
 
-public/assets/ – contains project images and icons.
+## Assets
 
-Run the Project
-
-After cloning the repository:
-
-cd alx-listing-app
-npm install
-npm run dev
+Place images, icons and other static assets in `public/assets/`. A placeholder SVG is included to get started.
 
 
-Then open your browser and visit http://localhost:3000
- to confirm that the app runs successfully.
+## Author
 
-Repository Information
+Enya Elvis — Frontend Developer
 
-Repository Name: alx-listing-app
-
-Required Files:
-
-pages/index.tsx
-
-components/common/Card.tsx
-
-components/common/Button.tsx
-
-interfaces/index.ts
-
-constants/index.ts
-
-public/assets/
-
-README.md
-
-Assessment and Submission
-
-Submit before the deadline.
-
-Include all required files.
-
-Generate and submit your review link.
-
-Participate in peer review sessions.
-
-Author
-
-Enya Elvis
-Frontend Developer, Nigeria
-GitHub: your-username
+GitHub: enyasystem
