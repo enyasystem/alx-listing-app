@@ -1,10 +1,6 @@
 # ALX Listing App
 
 ### Milestone 1: Scaffolding and Initial Setup for Listing Page
-
-**Duration:** October 27, 2025 – November 3, 2025  
-**Weight:** 1
-
 ---
 
 ## About the Project
